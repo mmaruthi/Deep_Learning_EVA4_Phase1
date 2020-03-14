@@ -7,7 +7,7 @@ Solution acheived and the approach followed :
 
 2. Changed the ResNet18 model a bit - Removed Fully connected Layer , Added Softmax for determining the output, Used a convolutionlayer after GAP.
 
-ResNet Model - 
+[ResNet Model](https://github.com/mmaruthi/Deep_Learning_EVA4_Phase1/blob/master/S8_ResNet_Modular/s8_resnet.py)
 
 3. Used the rest of the things - Transforms , Train Loader , Loss calculation from the [modular code](https://github.com/mmaruthi/Deep_Learning_EVA4_Phase1/tree/master/S8_ResNet_Modular/model)
 
