@@ -20,4 +20,4 @@ class DataLoader:
 
     def load(self, data):
         return torch.utils.data.DataLoader(data, **self.dataloader_args)
-© 2020 GitHub, Inc.
+
