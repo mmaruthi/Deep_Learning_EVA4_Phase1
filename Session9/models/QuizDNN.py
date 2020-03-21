@@ -72,7 +72,7 @@ class CIFAR10Net_S9(nn.Module):
             nn.Dropout(dropout_value)
         ) # in = 8x8x64 , out = 8x8x32, RF = 44              
       
-        # OUTPUT BLOCK
+        # OUTPUT BLOCK - GAP and FC
         self.Gap1 = nn.Sequential(
             nn.AvgPool2d(kernel_size=8)
         ) # in = 8x8x32 , out = 1x1x32, RF = 72	
