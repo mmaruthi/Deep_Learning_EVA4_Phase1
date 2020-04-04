@@ -51,9 +51,9 @@ class Train_loss:
               loss.backward()
               optimizer.step()
               
-              lr = self.scheduler.get_last_lr()[0] if self.scheduler else (self.optimizer.lr_scheduler.get_last_lr()[0] if self.optimizer.lr_scheduler else self.optimizer.param_groups[0]['lr'])
-              if self.scheduler:
-                 self.scheduler.step()    
+              #lr = self.scheduler.get_last_lr()[0] if self.scheduler else (self.optimizer.lr_scheduler.get_last_lr()[0] if self.optimizer.lr_scheduler else self.optimizer.param_groups[0]['lr'])
+              #if self.scheduler:
+              #   self.scheduler.step()    
               # Calculating accuracies
               labels_pred_max = labels_pred.argmax(dim = 1, keepdim = True) # Getting the index of max log probablity predicted by model
               correct         += labels_pred_max.eq(labels.view_as(labels_pred_max)).sum().item() # Getting count of correctly predicted
@@ -61,9 +61,9 @@ class Train_loss:
               train_acc_batch = (correct/total)*100            
               pbar.set_description(desc=f'Train Loss = {loss.item()} Batch Id = {batch_idx} Train Accuracy = {train_acc_batch:0.2f} Learning Rate = {self.scheduler.get_last_lr()[0]:0.6f}')
                                           
-              if self.scheduler and print_idx != 0 and \
-                 (batch_idx % print_idx == 0 or np.round(self.scheduler.get_last_lr()[0],6) == maxlr):
-                 pbar.write(f"Learning Rate(lr) = {self.scheduler.get_last_lr()[0]:0.6f}")      
+              #if self.scheduler and print_idx != 0 and \
+              #   (batch_idx % print_idx == 0 or np.round(self.scheduler.get_last_lr()[0],6) == maxlr):
+              #   pbar.write(f"Learning Rate(lr) = {self.scheduler.get_last_lr()[0]:0.6f}")      
         
           train_acc.append(train_acc_batch)  # To capture only final batch accuracy of an epoch
           train_losses.append(loss)          # To capture only final batch loss of an epoch
