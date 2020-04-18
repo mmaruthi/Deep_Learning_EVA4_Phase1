@@ -1,4 +1,4 @@
-from albumentations import Compose, ElasticTransform, Flip, CoarseDropout, RandomCrop, pytorch, Normalize, Resize, \
+from albumentations import Compose, ElasticTransform, Flip, RandomCrop, pytorch, Normalize, Resize, \
     HorizontalFlip, Rotate, PadIfNeeded, CenterCrop, Cutout
 import numpy as np
 
