@@ -16,7 +16,7 @@ import os.path
 from os import path
 
 import Sourc.dataset.dataset as dst
-from Sourc.models import CNN_Model, ResNet18, A11CustomResnetModel
+#from Sourc.models import CNN_Model, ResNet18, A11CustomResnetModel
 
 
 class Utils:
@@ -78,35 +78,35 @@ class Utils:
         return checkpoint, epoch, model_state_dict, optimizer_state_dict, train_losses, train_acc, test_losses, test_acc \
             , test_losses, lr_data, class_correct, class_total
 
-    def createmodel(model_state_dict=None):
-        use_cuda = torch.cuda.is_available()
-        device = torch.device("cuda" if use_cuda else "cpu")
-        print(device)
-        model = CNN_Model().to(device)
+    #def createmodel(model_state_dict=None):
+    #    use_cuda = torch.cuda.is_available()
+    #    device = torch.device("cuda" if use_cuda else "cpu")
+    #    print(device)
+    #    model = CNN_Model().to(device)
 
-        return model, device
+    #   return model, device
 
-    def createmodelresnet18(model_state_dict=None, numclasses=10):
-        use_cuda = torch.cuda.is_available()
-        device = torch.device("cuda" if use_cuda else "cpu")
-        print(device)
-        model = ResNet18(numclasses).to(device)
+    #def createmodelresnet18(model_state_dict=None, numclasses=10):
+    #    use_cuda = torch.cuda.is_available()
+    #    device = torch.device("cuda" if use_cuda else "cpu")
+    #    print(device)
+    #    model = ResNet18(numclasses).to(device)
 
-        if model_state_dict != None:
-            model.load_state_dict(state_dict=model_state_dict)
+    #    if model_state_dict != None:
+    #        model.load_state_dict(state_dict=model_state_dict)
 
-        return model, device
+     #   return model, device
 
-    def createA11CustomResnetModel(model_state_dict=None):
-        use_cuda = torch.cuda.is_available()
-        device = torch.device("cuda" if use_cuda else "cpu")
-        print(device)
-        model = A11CustomResnetModel().to(device)
+    #def createA11CustomResnetModel(model_state_dict=None):
+    #    use_cuda = torch.cuda.is_available()
+    #    device = torch.device("cuda" if use_cuda else "cpu")
+    #    print(device)
+    #    model = A11CustomResnetModel().to(device)
 
-        if model_state_dict != None:
-            model.load_state_dict(state_dict=model_state_dict)
+    #    if model_state_dict != None:
+    #        model.load_state_dict(state_dict=model_state_dict)
 
-        return model, device
+    #    return model, device
 
     def createoptimizer(model, lr=0.1, momentum=0.9, weight_decay=0, nesterov=False):
         optimizer = optim.SGD(model.parameters(), lr=lr, momentum=momentum, weight_decay=weight_decay,
