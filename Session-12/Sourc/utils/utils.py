@@ -15,8 +15,8 @@ from zipfile import ZipFile
 import os.path
 from os import path
 
-import src.dataset.dataset as dst
-from src.models import CNN_Model, ResNet18, A11CustomResnetModel
+import Sourc.dataset.dataset as dst
+from Sourc.models import CNN_Model, ResNet18, A11CustomResnetModel
 
 
 class Utils:
