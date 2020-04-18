@@ -7,7 +7,7 @@ from torch.optim.lr_scheduler import LambdaLR
 from torchsummary import summary
 from tqdm import tqdm
 
-from src.utils import Utils
+from Sourc.utils import Utils
 
 
 class TrainModel:
@@ -110,7 +110,7 @@ class TrainModel:
             print('Validation accuracy increased ({:.6f} --> {:.6f}).  Saving model ...'.format(
                 self.t_acc_max,
                 t_acc))
-            from src.utils import Utils
+            from Sourc.utils import Utils
             Utils.savemodel(model=model, epoch=epoch, path="savedmodels/checkpoint.pt",
                             optimizer_state_dict=self.optimizer.state_dict
                             , train_losses=self.train_losses, train_acc=self.train_acc, test_acc=self.test_acc,
@@ -251,7 +251,7 @@ class TrainModel:
         return optimizer
 
     def get_cyclic_scheduler(self, optimizer, epochs=25, max_lr_epoch=5, min_lr=0.01, max_lr=0.1):
-        from src.train import TrainHelper
+        from Sourc.train import TrainHelper
         lambda1 = TrainHelper.cyclical_lr(max_lr_epoch=max_lr_epoch, epochs=epochs, min_lr=min_lr, max_lr=max_lr)
         scheduler = LambdaLR(optimizer, lr_lambda=[lambda1])
         return scheduler
