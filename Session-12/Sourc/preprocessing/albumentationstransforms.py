@@ -1,6 +1,7 @@
 import cv2
 from albumentations import Compose, Flip, pytorch, Normalize, OneOf, MotionBlur, MedianBlur, Blur, \
-    ShiftScaleRotate, OpticalDistortion, GridDistortion, HueSaturationValue, CoarseDropout, GaussNoise, RandomCrop, \
+    #ShiftScaleRotate, OpticalDistortion, GridDistortion, HueSaturationValue, CoarseDropout, GaussNoise, RandomCrop, \
+    ShiftScaleRotate, OpticalDistortion, GridDistortion, HueSaturationValue, GaussNoise, RandomCrop, \
     PadIfNeeded
 
 
