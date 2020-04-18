@@ -1,4 +1,4 @@
-# from src.utils import Utils
+# from sourc.utils import Utils
 import time
 import numpy as np
 from tqdm import tqdm
@@ -13,7 +13,7 @@ class TinyImagenetHelper:
 
     def download_dataset(self, folder_path):
         url = "http://cs231n.stanford.edu/tiny-imagenet-200.zip"
-        from src.utils import Utils
+        from sourc.utils import Utils
         folder_path = Utils.download_file(folder_path, url=url)
 
         return Utils.extract_zip_file(file_path=folder_path, extract_path='data')
@@ -84,19 +84,19 @@ class TinyImagenetHelper:
     def get_tiny_image_net_test_train_loader(self, id_dict, path, batch_size):
         train_data, train_label, test_data, test_label = self.get_train_test_labels_data(id_dict, path)
 
-        from src.utils import tiny_image_net_mean
-        from src.utils import tiny_image_net_std
+        from sourc.utils import tiny_image_net_mean
+        from sourc.utils import tiny_image_net_std
         compose_train, compose_test = PreprocHelper.getalbumentationstraintesttransforms(
             tiny_image_net_mean, tiny_image_net_std)
 
-        from src.dataset import Dataset
+        from sourc.dataset import Dataset
         ds = Dataset()
         train_dataset = ds.get_tiny_imagenet_train_dataset(train_image_data=train_data, train_image_labels=train_label,
                                                            train_transforms=compose_train)
         test_dataset = ds.get_tiny_imagenet_test_dataset(test_image_labels=test_label, test_image_data=test_data,
                                                          test_transforms=compose_test)
 
-        from src.dataset import Dataloader
+        from sourc.dataset import Dataloader
         data_loader = Dataloader(traindataset=train_dataset, testdataset=test_dataset, batch_size=batch_size)
         train_loader = data_loader.gettraindataloader()
         test_loader = data_loader.gettestdataloader()
