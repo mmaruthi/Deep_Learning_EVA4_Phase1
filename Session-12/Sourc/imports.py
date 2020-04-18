@@ -1,35 +1,35 @@
 import torch
-import src.utils.utils as utils
-import src.preprocessing.albumentationstransforms as preprocessing
+import Sourc.utils.utils as utils
+import Sourc.preprocessing.albumentationstransforms as preprocessing
 
 preproc = preprocessing.AlbumentaionsTransforms()
-import src.preprocessing.preprochelper as preprochelper
+import Sourc.preprocessing.preprochelper as preprochelper
 import glob
 from PIL import Image
-from src.utils.modelutils import *
-import src.visualization.plotdata as plotdata
-import src.dataset.dataset as dst
-import src.dataset.dataloader as dl
-import src.preprocessing.customcompose as customcompose
-import src.train.train_model as train
+from Sourc.utils.modelutils import *
+import Sourc.visualization.plotdata as plotdata
+import Sourc.dataset.dataset as dst
+import Sourc.dataset.dataloader as dl
+import Sourc.preprocessing.customcompose as customcompose
+import Sourc.train.train_model as train
 import torch
 from torch.utils.tensorboard import SummaryWriter
 import torchvision
-from src.visualization.tensorboard.tensorboardhelper import TensorboardHelper
+from Sourc.visualization.tensorboard.tensorboardhelper import TensorboardHelper
 
-import src
-import src.dataset.dataset as dst
-import src.dataset.dataloader as dl
-import src.utils.utils as utils
-import src.train.train_model as train
-import src.visualization.plotdata as plotdata
-import src.preprocessing.preprochelper as preprochelper
-from src.utils import cifar_mean, cifar_std
-from src.dataset.tinyimagenethelper import TinyImagenetHelper
+import Sourc
+import Sourc.dataset.dataset as dst
+import Sourc.dataset.dataloader as dl
+import Sourc.utils.utils as utils
+import Sourc.train.train_model as train
+import Sourc.visualization.plotdata as plotdata
+import Sourc.preprocessing.preprochelper as preprochelper
+#from Sourc.utils import cifar_mean, cifar_std
+from Sourc.dataset.tinyimagenethelper import TinyImagenetHelper
 
 import datetime
 
-from src.dataset import TinyImagenetHelper, T1
+from Sourc.dataset import TinyImagenetHelper, T1
 
 import torch
 
