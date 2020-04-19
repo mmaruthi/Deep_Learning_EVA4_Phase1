@@ -1,0 +1,65 @@
+{"Dog1.jpg93088":{
+        "filename":"Dog1.jpg",
+        "size":93088,
+        "regions":[{
+             "shape_attributes":{
+                    "name":"rect",
+                    "x":203,
+                    "y":20,
+                    "width":349,
+                    "height":482},
+             "region_attributes":{
+                    "name":"Dog1",
+                    "type":"Dog",
+                    "image_quality":{
+                         "good":true,
+                         "frontal":true,
+                         "good_illumination":true}}}],
+         "file_attributes":{
+                 "caption":"",
+                 "public_domain":"no",
+                 "image_url":""}},
+                 
+  Explanation:
+      
+      Dog1.jpg93088 -> Dog1.jpg Is the image name. 
+      93088  is the Byte size of the image. 
+      Name+Size becomes actual Annotation in json.
+                 
+                 
+1. filename -> Image file name
+
+2. size -> size of the actual image. Each image can have different sizes.
+
+3. regions: These are the actual regions we draw around the object. Shape is the attribute of the region. Shape can be rectangle, polygon etc.
+	A. rect -> shape is rectangle. x, y, width and height are the Shape attributes.
+	B. shape _attributes:
+		Below is pictorial representation of the rectangular region: x is the starting s position of the region. y is the starting y position of the region.
+		width -> width of the rectangular region (x axis)
+		height -> height of the rectangular region (y axis)
+		
+	(x,y)	width	((x+width),y)
+		 ---------------
+		|			|   
+		|			|height  (Y increases from top to bottom.)
+		|			|
+		---------------
+	(x,(y+height))	((x+width),(y+height))
+	          
+		-----X axis ---> increases
+		
+	C. region_attributes: (We choose these attributes while annotating)
+		Important one. This covers the object type information.
+		name -> name of the object (example bearded-collie-1 we gave while annotating)
+		type: type of the object e.g., human, cat, dog etc. Type we choose while annotating.
+		image_quality: (We choose)
+			frontal-> attribute tells whether image appears to at front of the image. 
+			good_illumination-> true means, object is visible with good light.
+			good -> true indicates, object quaility is good. Object can easily be identified.
+			
+4. file_attributes:
+	caption -> caption to the image
+	public_domain -> Wheather Image is subjected to public domain
+	image_url: public url of the image
+      
+      
