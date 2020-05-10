@@ -25,7 +25,7 @@ The total size of the dataset
 Mean/STD values for your fg_bg, masks and depth images
 Show your dataset the way I have shown above in this readme
 Explain how you created your dataset
-how were fg created with transparency
+how were fg created with transparenc
 how were masks created for fgs
 how did you overlay the fg over bg and created 20 variants
 how did you create your depth images? 
