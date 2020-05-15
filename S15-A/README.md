@@ -4,7 +4,7 @@ S15A - Data Preperation for Depth and FG Detection Network (Jointly Done by Anil
 
 Below are the images created as part of data preparation
 
- 1.Gdrive Location : https://drive.google.com/drive/folders/1raMnribL-gsa4FEpX8QIeyR6yP4XgmP-?usp=sharing
+Gdrive Location : https://drive.google.com/drive/folders/1raMnribL-gsa4FEpX8QIeyR6yP4XgmP-?usp=sharing
 Total Size : 4.9 GB
 100 BG and its corresponding 100 Flip Images, Shape : 192X192X3, Type : jpg, Folder Name : BG_and_Its Flip Images
 100 FG images, Shape : 192x192x4, Type : png, transparent background, Folder Name : FG_Images
@@ -25,49 +25,5 @@ Downloaded 100 background images from web. Images of public places mostly malls 
 Downloaded 100 foreground images. Images of people were selected. Removed the background using Microsoft power point using 'Remove Background' option thereby adding transparent layer. After that cropped this image using 'Crop' option under 'Format' tab in PPT to select object only. Then saved this image in 'png' format so that transparency (alpha channel) is retained.
 Flipped the 100 background images we created in step 3 and saved it. This makes total 200 background images (100 – Regular, 100 – Flipped) all in jpg format
 Sample BG images
-Sample_BG_Images
+https://github.com/mmaruthi/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Images_For_ReadMe/BG_Sample10.png
 
-Corresponding BG Flip images
-Sample_BG_Flip_Images
-
-Sample FG images
-Sample_FG_Images
-
-FG_BG Preparation – Overlaying Foreground on Background Image. (400K images)
-Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DataPrep_V1.ipynb
-
-For each background image, each foreground image is overlaid in 20 random positions giving 1 BG * 100 FG * 20 Positions = 20000 images
-So each background with its flip is generating 20000 + 20000 = 40000 images.
-Similarly 100 background images with their corresponding flip will generate 400K images.
-These 400K images are saved one-by-one with naming convention like Img_fg_bg_20217.jpg in a colab folder.
-While overlaying, random positions are generated in such a way to ensure that foreground object remains within the background frame. We achieved this by calculating delta between width of BG & width of FG, delta between height of BG & height of FG and generated random positions between low as 0 and high as delta values. This ensured FG images remain within BG canvas like below.
-Random_Positions
-
-Saved colab folder is zipped and then copied to gdrive location.
-Sample FG_BG
-Sample_FG_BG
-
-FG_BG Mask preparation – Preparing mask of FG from FG_BG images (400K images)
-Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DataPrep_V1.ipynb
-
-Mask of FG_BG is prepared along FG_BG preparation and written in a separate colab folder.
-As followed for FG_BG, this colab folder is zipped and copied to gdrive.
-Foreground image that we are going to overlay over background is converted to gray scale. FG image already have a transparent background with object in it.
-Hence all those pixels which represent object will have a pixel value greater than zero. We will make these pixels 255 so they will be bright and rest all as zero.
-Next we will convert background image to gray scale. Here we will make all those pixels that are > 0 to 0. Result will be background turning dark.
-Next we will overlay converted foreground on top of converted background.
-Result will be a white mask of foreground on top of dark background.
-FG_BG Mask generated is as below
-FG_BG mask
-
-FG_BG Depth Creation
-Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DepthCreation_V1.ipynb
-
-We are taking Dense Depth model pre-trained on NYU dataset. This dataset is having similar background as chosen for FG_BG images.
-FG_BG images are passed on to DenseDepth model, resized to Grayscale 200x200 , stored in colab folder.
-This colab folder is zipped and copied to gdrive.
-FG_BG Depth generated is as below
-FG_BG depth
-Add the notebook file to your repo, one which you used to create this dataset
-
-Add the notebook file to your repo, one which you used to calculate statistics for this dataset
