@@ -12,10 +12,8 @@ Below are the images created as part of data preparation
 
 2) Statistics :
    - Mean : [0.56670278 0.49779153 0.43632878], Std-Dev : [0.38389994 0.30871084 0.25551239], Size : 3 GB
-   
    - Corresponding 400K FG_BG_Masks, Shape : 192x192x1, Type : jpg, Zip File Name : FG_BG_Mask_400K.zip
    - Mean : [0.20249742], Std-Dev : [0.39961225], Size : 906 MB
-   
    - 400K Depth images of FG_BG, Shape : 200x200x1, Type : jpg, Zip File Name : FG_BG_Depth_400K.zip
    - Mean : [0.32939295], Std-Dev : [0.24930712], Size : 1 GB
 
