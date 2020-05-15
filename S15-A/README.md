@@ -57,7 +57,7 @@ Sample FG Images:
 ![Sample FG Images](https://github.com/mmaruthi/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Images_For_ReadMe/FG_Sample10.png)
 
 FG_BG Preparation – Overlaying Foreground on Background Image. (400K images)
-Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DataPrep_V1.ipynb
+[FG_BG Code](https://github.com/mmaruthi/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DataPrep_V1.ipynb)
 
 For each background image, each foreground image is overlaid in 20 random positions giving 1 BG * 100 FG * 20 Positions = 20000 images
 
@@ -78,7 +78,7 @@ Sample FG_BG
 ![Sample FG_BG](https://github.com/mmaruthi/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Images_For_ReadMe/FG_BG_Sample10.png)
 
 FG_BG Mask preparation – Preparing mask of FG from FG_BG images (400K images)
-Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DataPrep_V1.ipynb
+[FG_BG_mask Code](https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DataPrep_V1.ipynb)
 
 Mask of FG_BG is prepared along FG_BG preparation and written in a separate colab folder.
 
