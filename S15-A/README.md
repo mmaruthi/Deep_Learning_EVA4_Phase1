@@ -5,10 +5,8 @@ S15A - Data Preperation for Depth and FG Detection Network (Jointly Done by Anil
 Below are the images created as part of data preparation
 
 1) Gdrive Location : https://drive.google.com/drive/folders/1raMnribL-gsa4FEpX8QIeyR6yP4XgmP-?usp=sharing
-
-   Total Size : 4.9 GB
-
-   100 BG and its corresponding 100 Flip Images, Shape : 192X192X3, Type : jpg, Folder Name : BG_and_Its Flip Images
+   -Total Size : 4.9 GB
+   -100 BG and its corresponding 100 Flip Images, Shape : 192X192X3, Type : jpg, Folder Name : BG_and_Its Flip Images
 
    100 FG images, Shape : 192x192x4, Type : png, transparent background, Folder Name : FG_Images
 
