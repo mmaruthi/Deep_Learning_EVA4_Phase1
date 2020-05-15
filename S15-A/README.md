@@ -26,5 +26,5 @@ Downloaded 100 foreground images. Images of people were selected. Removed the ba
 Flipped the 100 background images we created in step 3 and saved it. This makes total 200 background images (100 – Regular, 100 – Flipped) all in jpg format
 Sample BG images
 
-(https://github.com/mmaruthi/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Images_For_ReadMe/BG_Sample10.png)
+![Sample BG Images](https://github.com/mmaruthi/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Images_For_ReadMe/BG_Sample10.png)
 
