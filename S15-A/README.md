@@ -44,7 +44,7 @@ Sample FG Images:
 ![Sample FG Images](https://github.com/mmaruthi/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Images_For_ReadMe/FG_Sample10.png)
 
 4) FG_BG Preparation – Overlaying Foreground on Background Image. (400K images)
-   - [FG_BG Code](https://github.com/mmaruthi/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DataPrep_V1.ipynb)
+   - [FG_BG Code](https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DataPrep_V1.ipynb)
    - For each background image, each foreground image is overlaid in 20 random positions giving 1 BG * 100 FG * 20 Positions = 20000 images
    - So each background with its flip is generating 20000 + 20000 = 40000 images.
    - Similarly 100 background images with their corresponding flip will generate 400K images.
@@ -57,7 +57,7 @@ Sample FG_BG :
      ![Sample FG_BG](https://github.com/mmaruthi/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Images_For_ReadMe/FG_BG_Sample10.png)
 
 5) FG_BG Mask preparation – Preparing mask of FG from FG_BG images (400K images)
-   - [FG_BG_overlay Code](https://github.com/mmaruthi/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DataPrep_V1.ipynb)
+   - [FG_BG_overlay Code](https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DataPrep_V1.ipynb)
    - Mask of FG_BG is prepared along FG_BG preparation and written in a separate colab folder.
    - As followed for FG_BG, this colab folder is zipped and copied to gdrive.
    - Foreground image that we are going to overlay over background is converted to gray scale. FG image already have a transparent background with object in it.
@@ -70,7 +70,7 @@ FG_BG Mask generated is as below
    - ![FG_BG_Mask](https://github.com/mmaruthi/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Images_For_ReadMe/FG_BG_Mask_Sample10.png)
 
 FG_BG Depth Creation
-   - [FG_BG_Depth Code](https://github.com/mmaruthi/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DepthCreation_V1.ipynb)
+   - [FG_BG_Depth Code](https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DepthCreation_V1.ipynb)
    - We are taking Dense Depth model pre-trained on NYU dataset. This dataset is having similar background as chosen for FG_BG images.
 FG_BG images are passed on to DenseDepth model, resized to Grayscale 200x200 , stored in colab folder.
    - This colab folder is zipped and copied to gdrive.
