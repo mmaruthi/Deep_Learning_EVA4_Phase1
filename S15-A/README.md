@@ -99,7 +99,7 @@ FG_BG Mask generated is as below
 ![FG_BG_Mask](https://github.com/mmaruthi/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Images_For_ReadMe/FG_BG_Mask_Sample10.png)
 
 FG_BG Depth Creation
-Code : https://github.com/mmaruthi/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DepthCreation_V1.ipynb
+[FG_BG_Depth Code](https://github.com/mmaruthi/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DepthCreation_V1.ipynb)
 
 We are taking Dense Depth model pre-trained on NYU dataset. This dataset is having similar background as chosen for FG_BG images.
 FG_BG images are passed on to DenseDepth model, resized to Grayscale 200x200 , stored in colab folder.
